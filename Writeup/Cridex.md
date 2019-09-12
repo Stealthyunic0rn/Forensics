@@ -19,7 +19,7 @@ Our output is:
            Image date and time : 2012-07-22 02:45:08 UTC+0000
      Image local date and time : 2012-07-21 22:45:08 -0400 
 
-We choose the first profile **WinXPSP2x86** and run the **pstree** command to see more of a heighracy view of the processes.
+Choosing the first profile **WinXPSP2x86** and run the **pstree** command to see more of a heighracy view of the processes.
 What caught my eye was that two of the processes (1484 1640) which were on their own level in the tree. 
 What also made them stand out was checking out the connscan output, which showed us the two suspected processes were connected to 
 an external host over port 8080.
@@ -51,7 +51,7 @@ full Win32 executable that has been injected into this memory region.
 
 
 Vaddump allowed me to furuter analyze the memory regions of both processes. to see if the malware was using certain commands.
-We used the  **strings** command to view human readable characters in our .dmp file. We can see certain API calls were used to inject the payload. VirtualAllocEx reserves, commits, or changes the state of a region of memory within the virtual address space of a specified process. WriteProcessMemory writes data to an area of memory in a specified process. The new malicious thread of execution was spawned via CreateRemoteThread.
+Using the  **strings** command to view human readable characters in our .dmp file. We can see certain API calls were used to inject the payload. VirtualAllocEx reserves, commits, or changes the state of a region of memory within the virtual address space of a specified process. WriteProcessMemory writes data to an area of memory in a specified process. The new malicious thread of execution was spawned via CreateRemoteThread.
 
           strings explorer.exe.23dea70.0x01460000-0x01480fff.dmp 
 
