@@ -45,3 +45,14 @@ Looking at the pstree output
     . 0x818233c8:reader_sl.exe                            228   1956      2     26 2011-10-10 17:04:41 UTC+0000
 
 
+Checking the connscan results, we the that the local address is talking internally on the network. Also that its through port 1026 which has numerous malicious services. All on the Pid of 1956.
+
+        Offset(P)  Local Address             Remote Address            Pid
+    ---------- ------------------------- ------------------------- ---
+    0x01a25a50 0.0.0.0:1026              172.16.98.1:6666          1956
+    
+    
+    
+ 
+
+
