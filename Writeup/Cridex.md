@@ -115,7 +115,7 @@ compare the hash on virus total.
           
           f5d61a0ccf96e07228a4818918aa33e8  executable.1484.exe
           
-As a result, we get back trojan results from the hash.
+As a result, we get back a trojan results from the hash.
 
 
 
