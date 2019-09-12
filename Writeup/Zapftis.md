@@ -50,8 +50,15 @@ Checking the connscan results, we the that the local address is talking internal
         Offset(P)  Local Address             Remote Address            Pid
     ---------- ------------------------- ------------------------- ---
     0x01a25a50 0.0.0.0:1026              172.16.98.1:6666          1956
-    
-    
+  
+  sockets
+  cmdscan
+  cmdline
+  consoles
+  memdump
+  procdump
+  psxview rabbit hole
+  
     
  
 
