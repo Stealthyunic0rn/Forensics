@@ -89,6 +89,15 @@ Then running the **apihooks** allowed us to find API/DLL function hooks for the 
           Hook address: 0x1467250
           Hooking module: <unknown>
 
+Userassist displays a table of programs executed on a Windows machine, complete with running count and last execution date and time. Looking down the output I noticed the only executable on the list. When looking up that .exe file it resulted in malware.
+          
+          REG_BINARY    UEME_RUNPATH:C:\WINDOWS\cridex1.exe : 
+          ID:             3
+          Count:          1
+          Last updated:   2012-07-22 02:31:51 UTC+0000
+          Raw Data:
+          0x00000000  03 00 00 00 06 00 00 00 00 a1 9a 26 b2 67 cd 01   ...........&.g..
+
 
 
 I've decided to run **procdump** to make the processess an executable so I can take the hash and compare it.
