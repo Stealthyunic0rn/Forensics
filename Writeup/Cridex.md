@@ -89,7 +89,7 @@ Then running the **apihooks** allowed us to find API/DLL function hooks for the 
           Hook address: 0x1467250
           Hooking module: <unknown>
 
-Userassist displays a table of programs executed on a Windows machine, complete with running count and last execution date and time. Looking down the output I noticed the only executable on the list. When looking up that .exe file it resulted in malware.
+Userassist displays a table of programs executed on a Windows machine, complete with running count and last execution date and time. Looking down the output I noticed the only executable on the list. When looking up that .exe file it resulted in malware. According to my searches "Cridex is a sophisticated strain of banking malware that can steal banking credentials and other personal information on an infected system in order to gain access to the financial records of a user."
           
           REG_BINARY    UEME_RUNPATH:C:\WINDOWS\cridex1.exe : 
           ID:             3
