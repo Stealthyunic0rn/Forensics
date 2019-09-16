@@ -12,13 +12,17 @@ The objective of this challenge is to
 believe this incident is fully contained, or are there additional machines that you believe may still be involved.
 
 ## Memory Analysis
-Using volatility was the first step in order to collect information on the images. **imageinfo** was used to find out the OS
+First I wanted to get as much information as possible on the differnet images. Using both **imageinfo** and **connections** gives me the profile, time the image was taken, and the IP of that NIC. 
 
 DC-USTXHOU: Win2003SP0x86 172.16.150.10 UTC+0000
+
 ENG-USTXHOU-148: WinXPSP2x86 172.16.150.20  UTC+0000
+
 FLD-SARIYADH-43: WinXPSP2x86 172.16.223.187 UTC +0300
+
 IIS-SARIYADH-03: Win2003SP0x86 172.16.223.47 UTC +300
 
+## Packet Analysis
 The PCAP has two hours of traffic
 Ports 1097, 1098, 1099 Some Trojans use these ports
 Looking at the IP's I can determine that only two IPs are talking ENG-USTXHOU-148 and a 58.64.132.141
