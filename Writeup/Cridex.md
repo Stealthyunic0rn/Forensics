@@ -49,7 +49,7 @@ full Win32 executable that has been injected into this memory region.
           0x003d0030  00 00 00 00 00 00 00 00 00 00 00 00 e0 00 00 00   ................
 
 
-**Vaddump** allowed me to furuter analyze the memory regions of both processes. to see if the malware was using certain commands.
+**Vaddump** allowed me to furuter analyze the memory regions of both processes to see if the malware was using certain commands.
 
           volatility -f cridex.vmem vaddump -p 1484 --dump-dir /root/Downloads/vad
 
