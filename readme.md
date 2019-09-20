@@ -1,4 +1,6 @@
-                                       ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓                                        
+  This repo is inteaded for all forensics related materials. Mostly writeups relating to memory samples and disk images.
+  
+                                        ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓                                        
                                   ██████                        ██████                                  
                               ████                                    ████                              
                             ▓▓                                            ██                            
