@@ -45,13 +45,13 @@ Looking at the pstree output
     . 0x818233c8:reader_sl.exe                            228   1956      2     26 2011-10-10 17:04:41 UTC+0000
 
 Running **malfind** with the PID of 1956 results in nothing returned.
-Checking the connscan results, we see that the PID 1956 is communicationg with a remote address. Its all through port 1026 which has numerous malicious services. I also ran the **sockets** command but that didn't get me much. I also ran **psxview** to look for hidden processes but none came up.
+Checking the connscan results, we see that the PID 1956 is communicating with a remote address. Its all through port 1026 which has numerous malicious services. I also ran the **sockets** command, but that didn't get me much. I also ran **psxview** to look for hidden processes, but none came up.
 
         Offset(P)  Local Address             Remote Address            Pid
     ---------- ------------------------- ------------------------- ---
     0x01a25a50 0.0.0.0:1026              172.16.98.1:6666          1956
 
-**Cmdscan** shows the commands that anyone entered through a console shell. It seems like the person was searching for a service named malware or malwar. This could signify that they were trying to verify that the malicious service was running.
+**Cmdscan** shows the commands that anyone entered through a console shell. It seems like the person was searching for a service named malware or malware. This could signify that they were trying to verify that the malicious service was running.
        
        CommandProcess: csrss.exe Pid: 608
        CommandHistory: 0x11132d8 Application: cmd.exe Flags: Allocated, Reset
@@ -62,12 +62,12 @@ Checking the connscan results, we see that the PID 1956 is communicationg with a
        Cmd #1 @ 0x11135e8: sc query malware
        
        
-The **cmdline** command lets us see the complete command which was used to launch each process. We can see that the process *Reader_sl.exe* was launched.
-       
+The **cmdline** command lets us see the complete commands which was used to launch each process. We can see that the process *Reader_sl.exe* was started.
+
     reader_sl.exe pid:    228
     Command line : "C:\Program Files\Adobe\Reader 9.0\Reader\Reader_sl.exe"
     
-I also usef the **consoles** which shows that there is a service running called malware which is type *KERNEL_DRIVER*. So we know that the service is running in kernel mode.
+I also used the **consoles** command which shows that there is a service running called malware which is type *KERNEL_DRIVER*. So we know that the service is running in kernel mode.
 
      C:\Documents and Settings\Administrator>sc query malware                        
                                                                                 
@@ -80,8 +80,8 @@ I also usef the **consoles** which shows that there is a service running called 
         CHECKPOINT         : 0x0                                                
         WAIT_HINT          : 0x0 
  
-With all this information on the process I decided to turn the process into executable so I can take the hash and check it in virus total. However, nothing came up in virus total. So I checked one of the children processes of PID 1956 which is *cmd.exe PID 544*. I got a hit on this hash which turns out to be a Trojan.
-        
+With all this information on the process, I decided to turn the process into executable, so I can take the hash and check it in virus total. However, nothing came up in virus total. So I checked one of the children processes of PID 1956, which is *cmd.exe PID 544*. I got a hit on this hash which turns out to be a Trojan.
+
         8f000380134d51f34c0f1b075812cdd2  executable.228.exe
         6cee14703054e226e87a963372f767aa  executable.544.exe
 
