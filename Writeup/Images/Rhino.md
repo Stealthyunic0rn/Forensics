@@ -1,6 +1,9 @@
 # Rhino
+
 **Scenario**
 
 The city of New Orleans passed a law in 2004 making possession of nine or more unique rhinoceros images a serious crime.   The network administrator at the University of New Orleans recently alerted police when his instance of RHINOVORE flagged illegal rhino traffic.  Evidence in the case includes a computer and USB key seized from one of the University’s labs.  Unfortunately, the computer had no hard drive.  The USB key was imaged and a copy of the dd image is on the CD-ROM you’ve been given.
 
- In addition to the USB key drive image, three network traces are also available—these were provided by the network administrator and involve the machine with the missing hard drive.    The suspect is the primary user of this machine, who has been pursuing his Ph.D. at the University since 1972.
+ In addition to the USB key drive image, three network traces are also available—these were provided by the network administrator and involve the machine with the missing hard drive. The suspect is the primary user of this machine, who has been pursuing his Ph.D. at the University since 1972.
+
+The provided files are a .dd file and three log files.
