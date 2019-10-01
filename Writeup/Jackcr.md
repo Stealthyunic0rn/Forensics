@@ -1,7 +1,7 @@
 
 # Jackcf difr challenge Background
 
-`This` challenge comes with evidence from 4 machines and a pcap file from the 172.16.150.0/24 network.
+This challenge comes with evidence from 4 machines and a pcap file from the 172.16.150.0/24 network.
 The objective of this challenge is to 
 1. Determine compromised machines.  
 	a. evidence files were collected from machines suspected to be involved in this incident
